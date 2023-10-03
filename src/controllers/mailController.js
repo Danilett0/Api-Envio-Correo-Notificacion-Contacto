@@ -4,6 +4,7 @@ const Mail = require("../models/mailModel");
 exports.sendMail = (req, res) => {
   let { to, subject, html } = req.body;
 
+  // envio los datos a la clase en el modelo
   let mail = new Mail(to, subject, html);
 
   mail.send((error, info) => {

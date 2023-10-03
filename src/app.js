@@ -9,11 +9,9 @@ app.use(cors());
 
 // Rutas a usar en el servidor
 app.get("/", (req, res) => {
-  res.send("API OKY DOKY :)");
-});
-
-app.get("/enviar-mail", (req, res) => {
-  res.send("api activa bebe");
+  res.send(
+    "Por el momento no tengo datos para mostrarte =) | recuerda usar el metodo POST y usar el metodo 'enviar-correo' "
+  );
 });
 
 app.post("/enviar-correo", mailController.sendMail);
